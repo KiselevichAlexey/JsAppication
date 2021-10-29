@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto', serif;
+    color: #1C1C1C;
+}
+a{
+    text-decoration: none;
+    color :#333
+}
+.not-favorite{
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.not-favorite h2 {
+    margin:32px 0 8px 0
+}
+.container{
+    max-width: 744px;
+    margin: auto;
+    padding-top: 64px;
+}
+
+.nav {
+    margin: auto;
+    display:flex;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 41px;
+}
+.nav-item{
+    cursor: pointer;
+    width: 50%;
+    padding: 16px 32px;
+    border-radius: 10px;
+}
+.nav-item:hover{
+   background-color:  #edf9ffd2;
+}
+.active{
+    color: #117DC1;
+    background-color: #EDF9FF;
+}
+
+.user-list{
+    font-size: 22px;
+    font-weight: 500;
+}
+.userlist__item{
+    min-height: 80px;
+}
+.album-list {
+    margin-top: 47px;
+    margin-left: 40px;
+}
+.album-list__item {
+    min-height: 80px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn {
+    border:0;
+    cursor: pointer;
+    margin-right: 20px;
+    display: inline-flex;
+    position: relative;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #117DC1;
+}
+.photo-gallery{
+    margin-top: 28px;
+   
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 42px;
+}
+.photo-gallery.fav {
+    width: 75%;
+    margin: auto;
+}
+.photo-gallery img{
+    border-radius: 5px;
+}
+.popup {
+    background: rgba(0, 0, 0, 0.47);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.popup div {
+    align-self: center;
+}
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    }
+    .close:hover {
+    opacity: 1;
+    }
+    .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #FFF;
+    }
+    .close:before {
+    transform: rotate(45deg);
+    }
+    .close:after {
+    transform: rotate(-45deg);
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+.btn:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+}
+.show:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: #fff;
+}
+.loader{
+    display: flex;
+    width: 100%;
+    min-height: 320px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.loader img {
+    margin: auto;
+}
+[data-tooltip] {
+    cursor: pointer;
+    position: relative; 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute; 
+    left: -20px; top: 150px; 
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.69);
+    color: #fff; 
+    padding: 4px 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    pointer-events: none; 
+    opacity: 0; 
+    font-size: 12px;
+    transition: 1s; 
+    border-radius: 4px;
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; 
+    top: 70px; 
+   }
+.photo-wrapper {
+    position: relative;
+}
+.card-title{
+    max-width: 150px;
+    font-size: 14px;
+    color:  #787878;
+    margin-top: 12px;
+    line-height: 21px;
+}
+.star {
+    background-color: inherit;
+    border:0;
+    z-index: 5;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+
+}
+.star img {
+    z-index: 1;
+}
+.error{
+    min-height: 40vh;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.error h4 {
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+.error p {
+    font-size: 18px;
+}
